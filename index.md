@@ -155,31 +155,31 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 
 ## Registration
 
-The summer school will be limited to 50 participants.
+The summer school will be limited to 50 participants. 
 
 <!-- Registrations are now closed. -->
 
-<!-- To register, please fill out the [Google -->
-<!-- form](https://goo.gl/forms/AqQrRSZTZKBIaFkR2), providing contact -->
-<!-- details, information about your experience using R, Bioconductor, and -->
-<!-- omics in general, how this workshop will benefit your research, and a -->
-<!-- CV and motivation statement in case you would like to qualify for a -->
-<!-- scholarship. These information will be used by the organising -->
-<!-- committee to select participants in case of -->
-<!-- over-subscription. Registrants will then be notified by the 1 April -->
-<!-- 2019 whether they were selected and will be invited to proceed with -->
-<!-- payment by 15 April, upon which final registration will be confirmed. -->
+To register, please fill out the [Google
+form](https://forms.gle/3KduxptdxwXymRgn7), providing contact details,
+information about your experience using R, Bioconductor, and omics in
+general, how this workshop will benefit your research, and a CV and
+motivation statement in case you would like to qualify for a
+scholarship. These information will be used by the organising
+committee to select participants in case of
+over-subscription. Registrants will then be notified by the 1 April
+2019 whether they were selected and will be invited to proceed with
+payment by 15 April, upon which final registration will be confirmed.
 
-<!-- Note that after payment, no refunds will be offered in case of -->
-<!-- cancellation. -->
+Note that after payment, no refunds will be offered in case of
+cancellation.
 
-## Fees
+### Fees
 
-- Students and post-doctoral researchers: 25 euros
+- Students and post-doctoral researchers: 50 euros
 - Permanent academic staff: 200 euros
 - Industry: 1000 euros
 
-## Scholarships
+### Scholarships
 
 We are happy to offer up to 20 scholarships of up to 1000 euros for
 travelling and accommodation to students and early career researchers.
@@ -225,19 +225,19 @@ ease with the suggested preliminary material by Martin Morgan below.
 
 ## Social programme
 
-All participants are invited to join for dinner in the Louvain House
-mezzanine on Wednesday at 7pm.
+All participants are invited to join for dinner on Wednesday
+night. Details will follow.
+
+## Contact
+
+For inquiries related to the registration, scientific program,
+organisation, please contact us at contact-cbio@uclouvain.be.
 
 ## Organising committee
 
 - Laurent Gatto
 - Axelle Loriot
 - Julie Klein
-
-## Contact
-
-For inquiries related to the registration, scientific program,
-organisation, please contact us at contact-cbio@uclouvain.be.
 
 ## Code of conduct
 
