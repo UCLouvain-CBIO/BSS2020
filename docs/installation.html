@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Installation instructions</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#installation-instructions">Installation instructions</a></li>
+    <li class="sidebar-header-2"><a href="#software-and-hardware-requirement">Software and hardware requirement</a></li>
+    <li class="sidebar-header-2"><a href="#installation-script">Installation script</a></li>
+    <li class="sidebar-header-2"><a href="#r-version">R version</a></li>
+    <li class="sidebar-header-2"><a href="#package-installation">Package installation</a></li>
+    <li class="sidebar-header-2"><a href="#download-additional-data">Download additional data</a></li>
+    <li class="sidebar-header-2"><a href="#success">Success</a></li>
+</ul>
+      </div>
+      <div class="span9 main"><h1 id="installation-instructions"><a class="header-link" href="#installation-instructions"></a>Installation instructions</h1>
+<p>Note that these instructions will be updated based on participants&#39;
+feedback.</p>
+<p><strong>Last update</strong>: Mon Feb 10 21:19:23 2020</p>
+<h2 id="software-and-hardware-requirement"><a class="header-link" href="#software-and-hardware-requirement"></a>Software and hardware requirement</h2>
+<p><strong>Participants are required</strong> to bring their own laptop with
+<a href="https://www.r-project.org/">R</a> version 3.6.0 or greater. We also
+recommend to also install the latest version of
+<a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>.</p>
+<p>Please make sure that your computer’s hardware is sufficiently powered
+(&gt;4 GB RAM, &gt; 2 GB free disk space), that you have a working wireless
+card, and that you have administrator rights.</p>
+<h2 id="installation-script"><a class="header-link" href="#installation-script"></a>Installation script</h2>
+<p>To install all requirements, please copy and paste this line of code
+in your R console.</p>
+<pre class="hljs"><code><span class="hljs-keyword">source</span>(<span class="hljs-string">"https://uclouvain-cbio.github.io/BSS2020/installation.R"</span>)</code></pre><p>The whole installation can take some time, if many of the required
+packages aren&#39;t already installed. At the end, you should see a
+<em>Success!</em> message, indicating that all dependencies are installed and
+up-to-date, and you will also have the <code>airway.zip</code> and <code>extdata.zip</code>
+files in your working directory.</p>
+<p>The rest of this page describes the content of the installation script
+executed with the above line. It is given for information. In case of
+installation issues, check you internet connection and try to run the
+script a second time. If problems persist, please send your questions
+to the summer school mailing list, or try to execute the installation
+steps below one by one.</p>
+<h2 id="r-version"><a class="header-link" href="#r-version"></a>R version</h2>
+<pre class="hljs"><code>message(<span class="hljs-string">"* Checking R version."</span>)</code></pre><pre class="hljs"><code>## * Checking R version.</code></pre><pre class="hljs"><code>stopifnot(base::version$major == <span class="hljs-string">"3"</span>)
+stopifnot(base::version$minor &gt;= <span class="hljs-string">"6.2"</span>)</code></pre><h2 id="package-installation"><a class="header-link" href="#package-installation"></a>Package installation</h2>
+<p>We are going to user the <code>BiocManager</code> package to install all other
+packages from the <code>CRAN</code> and <code>Bioconductor</code> repositories. Let&#39;s start
+by installing <code>BiocManager</code> if it&#39;s not already available:</p>
+<pre class="hljs"><code>message(<span class="hljs-string">"* Installing BiocManager."</span>)</code></pre><pre class="hljs"><code>## * Installing BiocManager.</code></pre><pre class="hljs"><code><span class="hljs-keyword">if</span> (!<span class="hljs-keyword">require</span>(<span class="hljs-string">"BiocManager"</span>))
+    install.packages(<span class="hljs-string">"BiocManager"</span>)</code></pre><pre class="hljs"><code>## Loading required package: BiocManager</code></pre><pre class="hljs"><code>## <span class="hljs-selector-tag">Bioconductor</span> <span class="hljs-selector-tag">version</span> 3<span class="hljs-selector-class">.10</span> (<span class="hljs-selector-tag">BiocManager</span> 1<span class="hljs-selector-class">.30</span><span class="hljs-selector-class">.10</span>), ?<span class="hljs-selector-tag">BiocManager</span><span class="hljs-selector-pseudo">::install</span> <span class="hljs-selector-tag">for</span> <span class="hljs-selector-tag">help</span></code></pre><p>Below is a vector containing the names of all required packages:</p>
+<pre class="hljs"><code>pkgs &lt;- c(<span class="hljs-string">"rjson"</span>, <span class="hljs-string">"shinydashboard"</span>, <span class="hljs-string">"shiny"</span>, <span class="hljs-string">"shinyjs"</span>,
+          <span class="hljs-string">"shinythemes"</span>, <span class="hljs-string">"shinyFiles"</span>, <span class="hljs-string">"openxlsx"</span>, <span class="hljs-string">"statOmics/MSqRob"</span>,
+          <span class="hljs-string">"iSEE"</span>, <span class="hljs-string">"SummarizedExperiment"</span>, <span class="hljs-string">"SingleCellExperiment"</span>,
+          <span class="hljs-string">"tximeta"</span>, <span class="hljs-string">"org.Hs.eg.db"</span>, <span class="hljs-string">"DESeq2"</span>, <span class="hljs-string">"edgeR"</span>, <span class="hljs-string">"pheatmap"</span>,
+          <span class="hljs-string">"rmdformats"</span>, <span class="hljs-string">"apeglm"</span>, <span class="hljs-string">"lme4"</span>, <span class="hljs-string">"tidyverse"</span>, <span class="hljs-string">"rmarkdown"</span>,
+          <span class="hljs-string">"Biobase"</span>, <span class="hljs-string">"DT"</span>, <span class="hljs-string">"fdrtool"</span>, <span class="hljs-string">"graphics"</span>, <span class="hljs-string">"grDevices"</span>,
+          <span class="hljs-string">"limma"</span>, <span class="hljs-string">"MASS"</span>, <span class="hljs-string">"Matrix"</span>, <span class="hljs-string">"methods"</span>, <span class="hljs-string">"MSnbase"</span>, <span class="hljs-string">"numDeriv"</span>,
+          <span class="hljs-string">"openxlsx"</span>, <span class="hljs-string">"plyr"</span>, <span class="hljs-string">"preprocessCore"</span>, <span class="hljs-string">"statmod"</span>, <span class="hljs-string">"msdata"</span>,
+          <span class="hljs-string">"svDialogs"</span>, <span class="hljs-string">"utils"</span>, <span class="hljs-string">"vsn"</span>, <span class="hljs-string">"miniUI"</span>, <span class="hljs-string">"htmltools"</span>, <span class="hljs-string">"mzR"</span>,
+          <span class="hljs-string">"ProtGenerics"</span>, <span class="hljs-string">"BiocParallel"</span>, <span class="hljs-string">"snow"</span>, <span class="hljs-string">"httpuv"</span>, <span class="hljs-string">"xtable"</span>,
+          <span class="hljs-string">"htmlwidgets"</span>, <span class="hljs-string">"colorspace"</span>, <span class="hljs-string">"RColorBrewer"</span>, <span class="hljs-string">"dichromat"</span>,
+          <span class="hljs-string">"munsell"</span>, <span class="hljs-string">"labeling"</span>, <span class="hljs-string">"affyio"</span>, <span class="hljs-string">"zlibbioc"</span>, <span class="hljs-string">"doParallel"</span>,
+          <span class="hljs-string">"gtable"</span>, <span class="hljs-string">"scales"</span>, <span class="hljs-string">"tibble"</span>, <span class="hljs-string">"lazyeval"</span>, <span class="hljs-string">"reshape2"</span>,
+          <span class="hljs-string">"affy"</span>, <span class="hljs-string">"impute"</span>, <span class="hljs-string">"pcaMethods"</span>, <span class="hljs-string">"mzID"</span>, <span class="hljs-string">"MALDIquant"</span>,
+          <span class="hljs-string">"ggplot2"</span>, <span class="hljs-string">"XML"</span>, <span class="hljs-string">"minqa"</span>, <span class="hljs-string">"nloptr"</span>, <span class="hljs-string">"magrittr"</span>, <span class="hljs-string">"yaml"</span>,
+          <span class="hljs-string">"stringr"</span>, <span class="hljs-string">"stringi"</span>, <span class="hljs-string">"foreach"</span>, <span class="hljs-string">"iterators"</span>, <span class="hljs-string">"Rcpp"</span>,
+          <span class="hljs-string">"BiocGenerics"</span>, <span class="hljs-string">"BiocManager"</span>, <span class="hljs-string">"biomaRt"</span>, <span class="hljs-string">"Biostrings"</span>,
+          <span class="hljs-string">"BSgenome"</span>, <span class="hljs-string">"BSgenome.Hsapiens.UCSC.hg38"</span>, <span class="hljs-string">"ggbeeswarm"</span>,
+          <span class="hljs-string">"ISLR"</span>, <span class="hljs-string">"ca"</span>, <span class="hljs-string">"class"</span>, <span class="hljs-string">"curatedTCGAData"</span>, <span class="hljs-string">"dplyr"</span>,
+          <span class="hljs-string">"EnrichmentBrowser"</span>, <span class="hljs-string">"GenomicAlignments"</span>, <span class="hljs-string">"GenomicFeatures"</span>,
+          <span class="hljs-string">"GenomicRanges"</span>, <span class="hljs-string">"ggplot2"</span>, <span class="hljs-string">"GO.db"</span>, <span class="hljs-string">"IRanges"</span>, <span class="hljs-string">"KEGGREST"</span>,
+          <span class="hljs-string">"MultiAssayExperiment"</span>, <span class="hljs-string">"org.Hs.eg.db"</span>, <span class="hljs-string">"rtracklayer"</span>,
+          <span class="hljs-string">"limma"</span>, <span class="hljs-string">"SingleCellExperiment"</span>, <span class="hljs-string">"SummarizedExperiment"</span>,
+          <span class="hljs-string">"tibble"</span>, <span class="hljs-string">"tidyr"</span>, <span class="hljs-string">"TxDb.Hsapiens.UCSC.hg38.knownGene"</span>)
+pkgs &lt;- sort(unique(pkgs))
+pkgs</code></pre><pre class="hljs"><code>##   [<span class="hljs-number">1</span>] <span class="hljs-string">"affy"</span>                              <span class="hljs-string">"affyio"</span>                           
+##   [<span class="hljs-number">3</span>] <span class="hljs-string">"apeglm"</span>                            <span class="hljs-string">"Biobase"</span>                          
+##   [<span class="hljs-number">5</span>] <span class="hljs-string">"BiocGenerics"</span>                      <span class="hljs-string">"BiocManager"</span>                      
+##   [<span class="hljs-number">7</span>] <span class="hljs-string">"BiocParallel"</span>                      <span class="hljs-string">"biomaRt"</span>                          
+##   [<span class="hljs-number">9</span>] <span class="hljs-string">"Biostrings"</span>                        <span class="hljs-string">"BSgenome"</span>                         
+##  [<span class="hljs-number">11</span>] <span class="hljs-string">"BSgenome.Hsapiens.UCSC.hg38"</span>       <span class="hljs-string">"ca"</span>                               
+##  [<span class="hljs-number">13</span>] <span class="hljs-string">"class"</span>                             <span class="hljs-string">"colorspace"</span>                       
+##  [<span class="hljs-number">15</span>] <span class="hljs-string">"curatedTCGAData"</span>                   <span class="hljs-string">"DESeq2"</span>                           
+##  [<span class="hljs-number">17</span>] <span class="hljs-string">"dichromat"</span>                         <span class="hljs-string">"doParallel"</span>                       
+##  [<span class="hljs-number">19</span>] <span class="hljs-string">"dplyr"</span>                             <span class="hljs-string">"DT"</span>                               
+##  [<span class="hljs-number">21</span>] <span class="hljs-string">"edgeR"</span>                             <span class="hljs-string">"EnrichmentBrowser"</span>                
+##  [<span class="hljs-number">23</span>] <span class="hljs-string">"fdrtool"</span>                           <span class="hljs-string">"foreach"</span>                          
+##  [<span class="hljs-number">25</span>] <span class="hljs-string">"GenomicAlignments"</span>                 <span class="hljs-string">"GenomicFeatures"</span>                  
+##  [<span class="hljs-number">27</span>] <span class="hljs-string">"GenomicRanges"</span>                     <span class="hljs-string">"ggbeeswarm"</span>                       
+##  [<span class="hljs-number">29</span>] <span class="hljs-string">"ggplot2"</span>                           <span class="hljs-string">"GO.db"</span>                            
+##  [<span class="hljs-number">31</span>] <span class="hljs-string">"graphics"</span>                          <span class="hljs-string">"grDevices"</span>                        
+##  [<span class="hljs-number">33</span>] <span class="hljs-string">"gtable"</span>                            <span class="hljs-string">"htmltools"</span>                        
+##  [<span class="hljs-number">35</span>] <span class="hljs-string">"htmlwidgets"</span>                       <span class="hljs-string">"httpuv"</span>                           
+##  [<span class="hljs-number">37</span>] <span class="hljs-string">"impute"</span>                            <span class="hljs-string">"IRanges"</span>                          
+##  [<span class="hljs-number">39</span>] <span class="hljs-string">"iSEE"</span>                              <span class="hljs-string">"ISLR"</span>                             
+##  [<span class="hljs-number">41</span>] <span class="hljs-string">"iterators"</span>                         <span class="hljs-string">"KEGGREST"</span>                         
+##  [<span class="hljs-number">43</span>] <span class="hljs-string">"labeling"</span>                          <span class="hljs-string">"lazyeval"</span>                         
+##  [<span class="hljs-number">45</span>] <span class="hljs-string">"limma"</span>                             <span class="hljs-string">"lme4"</span>                             
+##  [<span class="hljs-number">47</span>] <span class="hljs-string">"magrittr"</span>                          <span class="hljs-string">"MALDIquant"</span>                       
+##  [<span class="hljs-number">49</span>] <span class="hljs-string">"MASS"</span>                              <span class="hljs-string">"Matrix"</span>                           
+##  [<span class="hljs-number">51</span>] <span class="hljs-string">"methods"</span>                           <span class="hljs-string">"miniUI"</span>                           
+##  [<span class="hljs-number">53</span>] <span class="hljs-string">"minqa"</span>                             <span class="hljs-string">"msdata"</span>                           
+##  [<span class="hljs-number">55</span>] <span class="hljs-string">"MSnbase"</span>                           <span class="hljs-string">"MultiAssayExperiment"</span>             
+##  [<span class="hljs-number">57</span>] <span class="hljs-string">"munsell"</span>                           <span class="hljs-string">"mzID"</span>                             
+##  [<span class="hljs-number">59</span>] <span class="hljs-string">"mzR"</span>                               <span class="hljs-string">"nloptr"</span>                           
+##  [<span class="hljs-number">61</span>] <span class="hljs-string">"numDeriv"</span>                          <span class="hljs-string">"openxlsx"</span>                         
+##  [<span class="hljs-number">63</span>] <span class="hljs-string">"org.Hs.eg.db"</span>                      <span class="hljs-string">"pcaMethods"</span>                       
+##  [<span class="hljs-number">65</span>] <span class="hljs-string">"pheatmap"</span>                          <span class="hljs-string">"plyr"</span>                             
+##  [<span class="hljs-number">67</span>] <span class="hljs-string">"preprocessCore"</span>                    <span class="hljs-string">"ProtGenerics"</span>                     
+##  [<span class="hljs-number">69</span>] <span class="hljs-string">"RColorBrewer"</span>                      <span class="hljs-string">"Rcpp"</span>                             
+##  [<span class="hljs-number">71</span>] <span class="hljs-string">"reshape2"</span>                          <span class="hljs-string">"rjson"</span>                            
+##  [<span class="hljs-number">73</span>] <span class="hljs-string">"rmarkdown"</span>                         <span class="hljs-string">"rmdformats"</span>                       
+##  [<span class="hljs-number">75</span>] <span class="hljs-string">"rtracklayer"</span>                       <span class="hljs-string">"scales"</span>                           
+##  [<span class="hljs-number">77</span>] <span class="hljs-string">"shiny"</span>                             <span class="hljs-string">"shinydashboard"</span>                   
+##  [<span class="hljs-number">79</span>] <span class="hljs-string">"shinyFiles"</span>                        <span class="hljs-string">"shinyjs"</span>                          
+##  [<span class="hljs-number">81</span>] <span class="hljs-string">"shinythemes"</span>                       <span class="hljs-string">"SingleCellExperiment"</span>             
+##  [<span class="hljs-number">83</span>] <span class="hljs-string">"snow"</span>                              <span class="hljs-string">"statmod"</span>                          
+##  [<span class="hljs-number">85</span>] <span class="hljs-string">"statOmics/MSqRob"</span>                  <span class="hljs-string">"stringi"</span>                          
+##  [<span class="hljs-number">87</span>] <span class="hljs-string">"stringr"</span>                           <span class="hljs-string">"SummarizedExperiment"</span>             
+##  [<span class="hljs-number">89</span>] <span class="hljs-string">"svDialogs"</span>                         <span class="hljs-string">"tibble"</span>                           
+##  [<span class="hljs-number">91</span>] <span class="hljs-string">"tidyr"</span>                             <span class="hljs-string">"tidyverse"</span>                        
+##  [<span class="hljs-number">93</span>] <span class="hljs-string">"TxDb.Hsapiens.UCSC.hg38.knownGene"</span> <span class="hljs-string">"tximeta"</span>                          
+##  [<span class="hljs-number">95</span>] <span class="hljs-string">"utils"</span>                             <span class="hljs-string">"vsn"</span>                              
+##  [<span class="hljs-number">97</span>] <span class="hljs-string">"XML"</span>                               <span class="hljs-string">"xtable"</span>                           
+##  [<span class="hljs-number">99</span>] <span class="hljs-string">"yaml"</span>                              <span class="hljs-string">"zlibbioc"</span></code></pre><p>We first check which packages are already available, update all old
+packages with the latest available versions and proceed with the
+installation of packages that aren&#39;t installed yet.</p>
+<pre class="hljs"><code>message(<span class="hljs-string">"* Installing packages."</span>)</code></pre><pre class="hljs"><code>## * Installing packages.</code></pre><pre class="hljs"><code>ip &lt;- rownames(installed.packages())
+pkgs_to_install &lt;- pkgs[which(!sub(<span class="hljs-string">"^.+/"</span>, <span class="hljs-string">""</span>, pkgs) %<span class="hljs-keyword">in</span>% ip)]
+BiocManager::install(pkgs_to_install, update = <span class="hljs-literal">TRUE</span>, ask = <span class="hljs-literal">FALSE</span>, upgrade = <span class="hljs-string">'always'</span>)</code></pre><pre class="hljs"><code>## Bioconductor version <span class="hljs-number">3.10</span> (BiocManager <span class="hljs-number">1.30</span><span class="hljs-number">.10</span>), R <span class="hljs-number">3.6</span><span class="hljs-number">.2</span> (<span class="hljs-number">2019</span><span class="hljs-number">-12</span><span class="hljs-number">-12</span>)</code></pre><pre class="hljs"><code>## Installation path not writeable, unable to update packages: <span class="hljs-keyword">foreign</span>, nlme</code></pre><!-- Below, we also install the `BiocIntro` package if not already -->
+<!-- available: -->
+<!-- ```{r biocintro, eval = TRUE} -->
+<!-- if (!"BiocIntro" %in% ip) -->
+<!--     BiocManager::install("Bioconductor/BiocIntro", ref = "BSS2020") -->
+<!-- ``` -->
+<h2 id="download-additional-data"><a class="header-link" href="#download-additional-data"></a>Download additional data</h2>
+<p>The
+<a href="https://uclouvain-cbio.github.io/BSS2019/airway.zip"><code>airway.zip</code></a>
+file contains data that will be used during the RNASeq sessions. It can
+be downloaded from R in the working directory with:</p>
+<pre class="hljs"><code>message(<span class="hljs-string">"* Downloading data."</span>)</code></pre><pre class="hljs"><code>## * Downloading data.</code></pre><pre class="hljs"><code>download.file(<span class="hljs-string">"https://uclouvain-cbio.github.io/BSS2019/airway.zip"</span>, <span class="hljs-string">"airway.zip"</span>)
+download.file(<span class="hljs-string">"https://uclouvain-cbio.github.io/BSS2019/extdata.zip"</span>, <span class="hljs-string">"extdata.zip"</span>)</code></pre><h2 id="success"><a class="header-link" href="#success"></a>Success</h2>
+<p>If you see the following message in your console, it means you have
+successfully installed all requirements.</p>
+<pre class="hljs"><code>message(<span class="hljs-string">"* Success!"</span>)</code></pre><pre class="hljs"><code>## * Success!</code></pre><p>Back to the <a href="./index.html">summer school page</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

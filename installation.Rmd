@@ -22,7 +22,7 @@ To install all requirements, please copy and paste this line of code
 in your R console.
 
 ```{r installscript, eval = FALSE, purl = FALSE}
-source("https://uclouvain-cbio.github.io/BSS2019/installation.R")
+source("https://uclouvain-cbio.github.io/BSS2020/installation.R")
 ```
 
 The whole installation can take some time, if many of the required
@@ -127,7 +127,7 @@ be downloaded from R in the working directory with:
 message("* Downloading data.")
 ```
 
-```{r airway, eval = TRUE}
+```{r airway, eval = FALSE}
 download.file("https://uclouvain-cbio.github.io/BSS2019/airway.zip", "airway.zip")
 download.file("https://uclouvain-cbio.github.io/BSS2019/extdata.zip", "extdata.zip")
 ```
