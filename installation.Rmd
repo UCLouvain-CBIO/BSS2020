@@ -1,0 +1,144 @@
+# Installation instructions
+
+Note that these instructions will be updated based on participants'
+feedback.
+
+**Last update**: `r date()`
+
+## Software and hardware requirement
+
+**Participants are required** to bring their own laptop with
+[R](https://www.r-project.org/) version 3.6.0 or greater. We also
+recommend to also install the latest version of
+[RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+Please make sure that your computer’s hardware is sufficiently powered
+(>4 GB RAM, > 2 GB free disk space), that you have a working wireless
+card, and that you have administrator rights.
+
+## Installation script
+
+To install all requirements, please copy and paste this line of code
+in your R console.
+
+```{r installscript, eval = FALSE, purl = FALSE}
+source("https://uclouvain-cbio.github.io/BSS2019/installation.R")
+```
+
+The whole installation can take some time, if many of the required
+packages aren't already installed. At the end, you should see a
+*Success!* message, indicating that all dependencies are installed and
+up-to-date, and you will also have the `airway.zip` and `extdata.zip`
+files in your working directory.
+
+The rest of this page describes the content of the installation script
+executed with the above line. It is given for information. In case of
+installation issues, check you internet connection and try to run the
+script a second time. If problems persist, please send your questions
+to the summer school mailing list, or try to execute the installation
+steps below one by one.
+
+## R version
+
+```{r rversion, eval = TRUE}
+message("* Checking R version.")
+stopifnot(base::version$major == "3")
+stopifnot(base::version$minor >= "6.2")
+```
+
+## Package installation
+
+We are going to user the `BiocManager` package to install all other
+packages from the `CRAN` and `Bioconductor` repositories. Let's start
+by installing `BiocManager` if it's not already available:
+
+```{r biocmanagermsg, eval = TRUE}
+message("* Installing BiocManager.")
+```
+
+```{r biocmanager, eval = TRUE}
+if (!require("BiocManager"))
+    install.packages("BiocManager")
+```
+
+Below is a vector containing the names of all required packages:
+
+
+```{r pkgs}
+pkgs <- c("rjson", "shinydashboard", "shiny", "shinyjs",
+          "shinythemes", "shinyFiles", "openxlsx", "statOmics/MSqRob",
+          "iSEE", "SummarizedExperiment", "SingleCellExperiment",
+          "tximeta", "org.Hs.eg.db", "DESeq2", "edgeR", "pheatmap",
+          "rmdformats", "apeglm", "lme4", "tidyverse", "rmarkdown",
+          "Biobase", "DT", "fdrtool", "graphics", "grDevices",
+          "limma", "MASS", "Matrix", "methods", "MSnbase", "numDeriv",
+          "openxlsx", "plyr", "preprocessCore", "statmod", "msdata",
+          "svDialogs", "utils", "vsn", "miniUI", "htmltools", "mzR",
+          "ProtGenerics", "BiocParallel", "snow", "httpuv", "xtable",
+          "htmlwidgets", "colorspace", "RColorBrewer", "dichromat",
+          "munsell", "labeling", "affyio", "zlibbioc", "doParallel",
+          "gtable", "scales", "tibble", "lazyeval", "reshape2",
+          "affy", "impute", "pcaMethods", "mzID", "MALDIquant",
+          "ggplot2", "XML", "minqa", "nloptr", "magrittr", "yaml",
+          "stringr", "stringi", "foreach", "iterators", "Rcpp",
+          "BiocGenerics", "BiocManager", "biomaRt", "Biostrings",
+          "BSgenome", "BSgenome.Hsapiens.UCSC.hg38", "ggbeeswarm",
+          "ISLR", "ca", "class", "curatedTCGAData", "dplyr",
+          "EnrichmentBrowser", "GenomicAlignments", "GenomicFeatures",
+          "GenomicRanges", "ggplot2", "GO.db", "IRanges", "KEGGREST",
+          "MultiAssayExperiment", "org.Hs.eg.db", "rtracklayer",
+          "limma", "SingleCellExperiment", "SummarizedExperiment",
+          "tibble", "tidyr", "TxDb.Hsapiens.UCSC.hg38.knownGene")
+pkgs <- sort(unique(pkgs))
+pkgs
+```
+
+We first check which packages are already available, update all old
+packages with the latest available versions and proceed with the
+installation of packages that aren't installed yet.
+
+```{r pkgsmsg, eval = TRUE}
+message("* Installing packages.")
+```
+
+
+```{r install, eval = TRUE}
+ip <- rownames(installed.packages())
+pkgs_to_install <- pkgs[which(!sub("^.+/", "", pkgs) %in% ip)]
+BiocManager::install(pkgs_to_install, update = TRUE, ask = FALSE, upgrade = 'always')
+```
+
+<!-- Below, we also install the `BiocIntro` package if not already -->
+<!-- available: -->
+
+<!-- ```{r biocintro, eval = TRUE} -->
+<!-- if (!"BiocIntro" %in% ip) -->
+<!--     BiocManager::install("Bioconductor/BiocIntro", ref = "BSS2020") -->
+<!-- ``` -->
+
+## Download additional data
+
+The
+[`airway.zip`](https://uclouvain-cbio.github.io/BSS2019/airway.zip)
+file contains data that will be used during the RNASeq sessions. It can
+be downloaded from R in the working directory with:
+
+```{r datamsg, eval = TRUE}
+message("* Downloading data.")
+```
+
+```{r airway, eval = TRUE}
+download.file("https://uclouvain-cbio.github.io/BSS2019/airway.zip", "airway.zip")
+download.file("https://uclouvain-cbio.github.io/BSS2019/extdata.zip", "extdata.zip")
+```
+
+## Success
+
+If you see the following message in your console, it means you have
+successfully installed all requirements.
+
+```{r success, eval = TRUE}
+message("* Success!")
+```
+
+Back to the [summer school page](./index.html).
