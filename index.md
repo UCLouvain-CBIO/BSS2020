@@ -49,8 +49,13 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 - [**Charlotte Soneson**](https://csoneson.github.io/index.html)
   (Friedrich Miescher Institute and SIB Swiss Institute of
   Bioinformatics) - experimental design and differential expression,
-  and single cell RNA-seq.
+  single cell RNA sequencing.
+- [Catalina
+  Vallejos](https://www.ed.ac.uk/mrc-human-genetics-unit/research/vallejos-group)
+  (MRC Institute of Genetics & Molecular Medicine, University of
+  Edinburgh) - single cell RNA sequencing.
 - ...
+
 <!-- - [**Oliver Crook**](https://olivercrook.co.uk/) (University of -->
 <!--   Cambridge, UK) - Statistics and machine learn. -->
 
