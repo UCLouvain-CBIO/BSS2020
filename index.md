@@ -38,22 +38,21 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 
 **Instructors**
 
-- [**Martin Morgan**](https://www.roswellpark.org/martin-morgan) (Roswell
-  Park Comprehensive Cancer Center, head of the Bioconductor team) -
-  Bioconductor core technologies.
+- [**Catalina Vallejos**](https://vallejosgroup.github.io/)
+  (MRC Institute of Genetics & Molecular Medicine, University of
+  Edinburgh) - single cell RNA sequencing.
+- [**Charlotte Soneson**](https://csoneson.github.io/index.html)
+  (Friedrich Miescher Institute and SIB Swiss Institute of
+  Bioinformatics) - experimental design and differential expression,
+  single cell RNA sequencing.
 - [**Laurent Gatto**](https://lgatto.github.io/about/) (de Duve
   Institute, UCLouvain) - R/Bioconductor, Mass spectrometry and
   proteomics.
 - [**Lieven Clement**](https://statomics.github.io/) (Statistical Genomics Group, UGent) -
   Statistical genomics and quantitative proteomics.
-- [**Charlotte Soneson**](https://csoneson.github.io/index.html)
-  (Friedrich Miescher Institute and SIB Swiss Institute of
-  Bioinformatics) - experimental design and differential expression,
-  single cell RNA sequencing.
-- [Catalina
-  Vallejos](https://www.ed.ac.uk/mrc-human-genetics-unit/research/vallejos-group)
-  (MRC Institute of Genetics & Molecular Medicine, University of
-  Edinburgh) - single cell RNA sequencing.
+- [**Martin Morgan**](https://www.roswellpark.org/martin-morgan) (Roswell
+  Park Comprehensive Cancer Center, head of the Bioconductor team) -
+  Bioconductor core technologies.
 - ...
 
 <!-- - [**Oliver Crook**](https://olivercrook.co.uk/) (University of -->
