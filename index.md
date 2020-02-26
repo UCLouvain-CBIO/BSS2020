@@ -53,7 +53,8 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 - [**Martin Morgan**](https://www.roswellpark.org/martin-morgan) (Roswell
   Park Comprehensive Cancer Center, head of the Bioconductor team) -
   Bioconductor core technologies.
-- ...
+- [**Oliver Crook**](https://olivercrook.co.uk/) (University of
+  Cambridge, UK) - Statistics and machine learning.
 
 <!-- - [**Oliver Crook**](https://olivercrook.co.uk/) (University of -->
 <!--   Cambridge, UK) - Statistics and machine learn. -->
