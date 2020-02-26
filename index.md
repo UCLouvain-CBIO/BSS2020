@@ -170,9 +170,10 @@ general, how this workshop will benefit your research, and a CV and
 motivation statement in case you would like to qualify for a
 scholarship. These information will be used by the organising
 committee to select participants in case of
-over-subscription. Registrants will then be notified by the 1 April
-2020 whether they were selected and will be invited to proceed with
-payment by 15 April, upon which final registration will be confirmed.
+over-subscription. Registrations will remain open until 23 March
+midnight.  Registrants will then be notified by the 1 April 2020
+whether they were selected and will be invited to proceed with payment
+by 15 April, upon which final registration will be confirmed.
 
 Note that after payment, no refunds will be offered in case of
 cancellation.
