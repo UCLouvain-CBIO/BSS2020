@@ -160,25 +160,26 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 
 ## Registration
 
-The summer school will be limited to 50 participants.
+<!-- The summer school will be limited to 50 participants. -->
 
-<!-- Registrations are now closed. -->
+Registrations are now closed.
 
-To register, please fill out the [Google
-form](https://forms.gle/3KduxptdxwXymRgn7), providing contact details,
-information about your experience using R, Bioconductor, and omics in
-general, how this workshop will benefit your research, and a CV and
-motivation statement in case you would like to qualify for a
-scholarship. These information will be used by the organising
-committee to select participants in case of
-over-subscription. Registrations will remain open until Sunday 29
-March midnight (CET).  Registrants will then be notified by the 1
-April 2020 whether they were selected and will be invited to proceed
-with payment by 15 April, upon which final registration will be
-confirmed.
+<!-- To register, please fill out the [Google -->
+<!-- form](https://forms.gle/3KduxptdxwXymRgn7), providing contact details, -->
+<!-- information about your experience using R, Bioconductor, and omics in -->
+<!-- general, how this workshop will benefit your research, and a CV and -->
+<!-- motivation statement in case you would like to qualify for a -->
+<!-- scholarship. These information will be used by the organising -->
+<!-- committee to select participants in case of -->
+<!-- over-subscription. Registrations will remain open until Sunday 29 -->
+<!-- March midnight (CET).  --> 
 
-Note that after payment, no refunds will be offered in case of
-cancellation.
+<!-- Registrants will then be notified by the 1 April 2020 whether they -->
+<!-- were selected and will be invited to proceed with payment by 15 April, -->
+<!-- upon which final registration will be confirmed. -->
+
+<!-- Note that after payment, no refunds will be offered in case of -->
+<!-- cancellation. -->
 
 ### Fees
 
