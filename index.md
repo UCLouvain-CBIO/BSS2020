@@ -1,11 +1,16 @@
 title:  UCLouvain-CBIO BSS2020
 ---
 
+> **The 2020 summer edition has been officially cancelled. We will
+> annouce new events for winter 2020-2021 and/or summer 2021 here in due
+> time.**
+
+
 # Bioinformatics Summer School 2020
 
-> - [UCLouvain](http://uclouvain.be/), Louvain-la-Neuve, Belgium
-> - 6 - 10 July 2020
-> - [Louvain House](https://uclouvain.be/fr/louvainhouse)
+<!-- > - [UCLouvain](http://uclouvain.be/), Louvain-la-Neuve, Belgium -->
+<!-- > - 6 - 10 July 2020 -->
+<!-- > - [Louvain House](https://uclouvain.be/fr/louvainhouse) -->
 
 This one-week intensive summer school in bioinformatics will focus on
 **data analysis** and **high throughput biology**, with a special
