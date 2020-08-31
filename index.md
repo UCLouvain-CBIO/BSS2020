@@ -63,86 +63,83 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 
 - Members of the UCLouvain [Computational Biology research
   group](https://lgatto.github.io/cbio-lab/).
-<!-- - Members of the [SMCS](https://sites.uclouvain.be/smcs-gateway/) -->
-<!--   (Support en Méthodologie et Calcul Statistique) platform. -->
-<!-- - Jérôme Ambroise, CTMA, IREC, UCLouvain. -->
 
-<!-- ## Schedule -->
+# Tentative schedule
 
-<!-- <table> -->
-<!--   <thead> -->
-<!--	<tr> -->
-<!--	  <th>Time </th> -->
-<!--	  <th>Monday</th> -->
-<!--	  <th>Tuesday</th> -->
-<!--	  <th>Wednesday</th> -->
-<!--	  <th>Thursday</th> -->
-<!--	  <th>Friday</th> -->
-<!--	</tr> -->
-<!--   </thead> -->
-<!--   <tbody> -->
-<!--	 <tr> -->
-<!--		<th>8.30-9.00 </th> -->
-<!--		<td colspan=5>Coffee and breakfast (on site)</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>9.00-9.30 </th> -->
-<!--		<td>Registration, help desk and opening remarks ([slides](https://docs.google.com/presentation/d/1RK5czd_e-sEx1MguYa093Y2s7d8EECJyGyn0JPJDAUY/edit?usp=sharing))</td> -->
-<!--		<td rowspan=2>Bioconductor core technologies (SE, Genomics ranges) ([Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/03_CoreApproachesInBioconductor.Rmd), [html](https://uclouvain-cbio.github.io/BSS2019/03_CoreApproachesInBioconductor.html)) (MM)</td> -->
-<!--		<td rowspan=2>Gene set enrichment analysis (with practical) ([slides pdf](https://uclouvain-cbio.github.io/BSS2019/06_GeneSetEnrichmentSlides.pdf), [html](https://uclouvain-cbio.github.io/BSS2019/06_GeneSetEnrichment.html), [Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/06_GeneSetEnrichment.Rmd)) (MM)</td> -->
-<!--		<td rowspan=2>High throughput sequencing data processing ([slides](https://uclouvain-cbio.github.io/BSS2019/HTSProcessing.pdf)) (CS, JM)</td> -->
-<!--		<td rowspan=2>Single cell RNA-seq [slides](https://uclouvain-cbio.github.io/BSS2019/SingleCellRNAseq_small_pdf.pdf) (KVB)</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>9.30-10.30 </th> -->
-<!--		<td>Talk: Bioinformatics at GSK Vaccines, Christophe Lambert</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>10.30-11.00</th> -->
-<!--		<td colspan=5>Coffee break</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>11.00-12.30</th> -->
-<!--		<td>Introduction to R and Bioconductor ([Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/01_IntroToRAndBioconductor.Rmd), [html](https://uclouvain-cbio.github.io/BSS2019/01_IntroToRAndBioconductor.html)) (MM)</td> -->
-<!--		<td>Visualisation ([html (part 1)](https://htmlpreview.github.io/?https://github.com/lgatto/visualisation/blob/master/graphs.html) and [slides (part 2](https://htmlpreview.github.io/?https://github.com/lgatto/visualisation/blob/master/highdimvis.html#)) (LG)</td> -->
-<!--		<td>Elements of statistics and machine learning ([slides](https://github.com/ococrook/2019-BSS/raw/master/Intro2statsml.pdf)) (OC)</td> -->
-<!--		<td>Practical: RNASeq ([Rmd](https://raw.githubusercontent.com/UCLouvain-CBIO/BSS2019/master/docs/rnaseq_gene_summerschool_belgium_2019.Rmd?token=AAC5ZRSJPZB3QU7I2LOGURS5F3SQK) and [html](https://uclouvain-cbio.github.io/BSS2019/rnaseq_gene_summerschool_belgium_2019.html))  </td> -->
-<!--		<td>Mass spectrometry-based proteomics ([slides](https://lgatto.github.io/bioc-ms-prot/bss-slides.html), vignette [Rmd](https://raw.githubusercontent.com/lgatto/bioc-ms-prot/master/bss-lab.Rmd) [html](https://lgatto.github.io/bioc-ms-prot/bss-lab.html)) (LG)</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>12.30-14.00</th> -->
-<!--		<td colspan=5>Lunch (on site)</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>14.00-15.30</th> -->
-<!--		<td>Rmarkdown for reproducible research ([slides](https://lgatto.github.io/rr-rmarkdown-intro-slides/index.html)) (LG)</td> -->
-<!--		<td>Practical: Bioc core technologies ([Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/04_Practical_CoreApproachesInBioconductor.Rmd), [html](https://uclouvain-cbio.github.io/BSS2019/04_Practical_CoreApproachesInBioconductor.html))</td> -->
-<!--		<td>Practical: stats/ML ([Rmd](https://github.com/ococrook/2019-BSS/blob/master/practical/Intro2statmlPractical.Rmd) and [html](https://htmlpreview.github.io/?https://github.com/ococrook/2019-BSS/blob/master/practical/Intro2statmlPractical.html)) (OC)</td> -->
-<!--		<td>Bulk RNA-Seq ([slides](https://uclouvain-cbio.github.io/BSS2019/BulkRNAseq.pdf)) (CS, JM)</td> -->
-<!--		<td>Quantitative proteomics data analysis ([slides and practical](https://uclouvain-cbio.github.io/BSS2019/pda.html)) (LC)</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>15.30-16.00</th> -->
-<!--		<td colspan=5>Coffee break</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>16.00-17.30</th> -->
-<!--		<td>Practical: R/Bioconductor and Rmarkdown ([Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/02_Practical_RBioconductorAndReproductibleResearch.Rmd), [html](https://uclouvain-cbio.github.io/BSS2019/02_Practical_RBioconductorAndReproductibleResearch.html))</td> -->
-<!--		<td>Working with biological  annotations ([Rmd](https://raw.githubusercontent.com/Bioconductor/BiocIntro/BSS2019/vignettes/05_Annotations.Rmd), [html](https://uclouvain-cbio.github.io/BSS2019/05_Annotations.html)) (MM)</td> -->
-<!--		<td>Principles of differential expression analysis (experimental design and batch effect) ([slides](https://uclouvain-cbio.github.io/BSS2019/ExperimentalDesign.pdf)) (CS)</td> -->
-<!--		<td>Practical: RNASeq ([Rmd](https://uclouvain-cbio.github.io/BSS2019/rnaseq_gene_summerschool_belgium_2019.Rmd) and [html](https://uclouvain-cbio.github.io/BSS2019/rnaseq_gene_summerschool_belgium_2019.html))</td> -->
-<!--		<td>Practical: proteomics</td> -->
-<!--	 </tr> -->
-<!--	 <tr> -->
-<!--		<th>17.30-18.00</th> -->
-<!--		<td>QA and day 1 wrap-up</td> -->
-<!--		<td>QA and day 2 wrap-up</td> -->
-<!--		<td>QA and day 3 wrap-up</td> -->
-<!--		<td>QA and day 4 wrap-up</td> -->
-<!--		<td>QA and workshop wrap-up</td> -->
-<!--	 </tr> -->
-<!-- </tbody> -->
-<!-- </table> -->
+<table>
+  <thead>
+	<tr>
+	  <th>Time </th>
+	  <th>Monday</th>
+	  <th>Tuesday</th>
+	  <th>Wednesday</th>
+	  <th>Thursday</th>
+	  <th>Friday</th>
+	</tr>
+  </thead>
+  <tbody>
+	 <tr>
+		<th>8.30-9.00 </th>
+		<td colspan=5>Coffee and breakfast (on site)</td>
+	 </tr>
+	 <tr>
+		<th>9.00-9.30 </th>
+		<td>Registration, help desk and opening remarks ([slides](https://docs.google.com/presentation/d/1RK5czd_e-sEx1MguYa093Y2s7d8EECJyGyn0JPJDAUY/edit?usp=sharing))</td>
+		<td rowspan=2>Gene set enrichment analysis (with practical)</td>
+		<td rowspan=2>Principles of differential expression analysis (experimental design and batch effect)</td>
+		<td rowspan=2>Introduction to single-cell RNA sequencing</td>
+		<td rowspan=2>Mass spectrometry-based proteomics</td>
+	 </tr>
+	 <tr>
+		<th>9.30-10.30 </th>
+		<td>Refresher: R, Rmarkdown and Bioconductor.</td>
+	 </tr>
+	 <tr>
+		<th>10.30-11.00</th>
+		<td colspan=5>Coffee break</td>
+	 </tr>
+	 <tr>
+		<th>11.00-12.30</th>
+		<td>Bioconductor core technologies</td>
+		<td>Elements of statistical learning</td>
+		<td>High throughput sequencing data processing</td>
+		<td>Orchestrating Single-Cell Analysis with Bioconductor</td>
+		<td>Practical: proteomics 1</td>
+	 </tr>
+	 <tr>
+		<th>12.30-14.00</th>
+		<td colspan=5>Lunch (on site)</td>
+	 </tr>
+	 <tr>
+		<th>14.00-15.30</th>
+		<td>Practical: Bioconductor core technologie</td>
+		<td>Practical: stats/ML</td>
+		<td>Practical: RNASeq (1)</td>
+		<td>Practical: scRNASeq (1)</td>
+		<td>Quantitative proteomics data analysis</td>
+	 </tr>
+	 <tr>
+		<th>15.30-16.00</th>
+		<td colspan=5>Coffee break</td>
+	 </tr>
+	 <tr>
+		<th>16.00-17.30</th>
+		<td>Visualisation</td>
+		<td>Working with biological  annotations (with practical)</td>
+		<td>Practical: RNASeq (2)</td>
+		<td>Practical: scRNASeq (2)</td>
+		<td>Practical: proteomics 2</td>
+	 </tr>
+	 <tr>
+		<th>17.30-18.00</th>
+		<td>QA and day 1 wrap-up</td>
+		<td>QA and day 2 wrap-up</td>
+		<td>QA and day 3 wrap-up</td>
+		<td>QA and day 4 wrap-up</td>
+		<td>QA and workshop wrap-up</td>
+	 </tr>
+</tbody>
+</table>
 
 <!-- ## Downloads -->
 
@@ -162,22 +159,22 @@ Previous edition: [https://uclouvain-cbio.github.io/BSS2019/](https://uclouvain-
 
 The summer school will be limited to 50 participants.
 
-<!-- Registrations are now closed. -->
+Registrations are not open yet.
 
-To register, please fill out the [Google
-form](https://forms.gle/3KduxptdxwXymRgn7), providing contact details,
-information about your experience using R, Bioconductor, and omics in
-general, how this workshop will benefit your research, and a CV and
-motivation statement in case you would like to qualify for a
-scholarship. These information will be used by the organising
-committee to select participants in case of
-over-subscription. Registrations will remain open until 23 March
-midnight.  Registrants will then be notified by the 1 April 2020
-whether they were selected and will be invited to proceed with payment
-by 15 April, upon which final registration will be confirmed.
+<!-- To register, please fill out the [Google -->
+<!-- form](https://forms.gle/3KduxptdxwXymRgn7), providing contact details, -->
+<!-- information about your experience using R, Bioconductor, and omics in -->
+<!-- general, how this workshop will benefit your research, and a CV and -->
+<!-- motivation statement in case you would like to qualify for a -->
+<!-- scholarship. These information will be used by the organising -->
+<!-- committee to select participants in case of -->
+<!-- over-subscription. Registrations will remain open until 23 March -->
+<!-- midnight.  Registrants will then be notified by the 1 April 2020 -->
+<!-- whether they were selected and will be invited to proceed with payment -->
+<!-- by 15 April, upon which final registration will be confirmed. -->
 
-Note that after payment, no refunds will be offered in case of
-cancellation.
+<!-- Note that after payment, no refunds will be offered in case of -->
+<!-- cancellation. -->
 
 ### Fees
 
